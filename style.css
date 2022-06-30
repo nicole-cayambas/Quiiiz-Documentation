@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+}
+body {
+    background-color: #F2E2CA;
+}
+header {
+    padding: 1rem;
+}
+a {
+    text-decoration: none;
+    color: #051834;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 1000;
+}
+h2 {
+    font-size: 2rem;
+}
+#h2-mod {
+    text-align: center;
+    font-size: 2.8rem; 
+    line-height: 0%; 
+    font-weight: bold;
+}
+#p-mod {
+    font-size: 0.8rem;
+}
+h3 {
+    font-size: 1rem;
+}
+#cloud1 {
+    position: absolute;
+    right: 140px;
+    top: 43px;
+}
+#cloud2 {
+    position: absolute;
+    right: 270px;
+    top: 75px;
+}
+#cloud3 {
+    position: absolute;
+    right: 60px;
+    top: 123px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#boxes {
+    width: 60%;
+    height: fit-content;
+}
+#box1 {
+    position: relative;
+    top: 150px;
+    background-color: #C6C1FC;
+    border: 5px solid #051834;
+    width: 850px;
+    aspect-ratio: 14/9;
+    z-index: 0;
+}
+#box2 {
+    position: relative;
+    top: -430px;
+    left: 40px;
+    background-color: #C8E084;
+    border: 5px solid #051834;
+    width: 850px;
+    aspect-ratio: 14/9;
+    z-index: 1;
+}
+#box3 {
+    position: relative;
+    top: -1015px;
+    left: 80px;
+    background-color: #EFC9AD;
+    border: 3px solid #051834;
+    width: 850px;
+    aspect-ratio: 14/9;
+    z-index: 1;
+    display: flex;
+}
+#box3 > #innerBoxLeft {
+    display: flex;
+    flex: 2.5;
+    flex-direction: column;
+}
+#box3 > #innerBoxRight {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#innerBoxLeftTop {
+    background-color: #EFC9AD;
+    border: 3px solid #051834;
+    flex: 2;
+}
+#innerBoxLeftBot {
+    background-color: #EAFBFA;
+    border: 3px solid #051834;
+    flex: 1;
+    padding: 15px;
+}
+#innerBoxRight1 {
+    flex: 1;
+    background-color: #ADEFC8;
+    border: 3px solid #051834;
+}
+#innerBoxRight2 {
+    flex: 1;
+    background-color: #E4C1E3;
+    border: 3px solid #051834;
+}
+#innerBoxRight3 {
+    flex: 1;
+    background-color: #A3A6E1;
+    border: 3px solid #051834;
+}
+#problem-statement, #user-research, #scope, #systems-design, #user-flow, #prototype {
+    height: 100vh;
+}
+#problem-statement {
+    position: relative;
+    top: -700px;
+}
