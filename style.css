@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16pt;
+    font-size: 100%;
+    /* border: 2px solid red; */
 }
 body {
     background-color: #F2E2CA;
@@ -14,13 +15,14 @@ header {
 a {
     text-decoration: none;
     color: #051834;
+    z-index: 100;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
     text-align: center;
-    font-size: 7rem;
+    font-size: 7em;
     font-weight: 1000;
 }
 h2 {
@@ -38,18 +40,19 @@ h2 {
 h3 {
     font-size: 1rem;
 }
-#cloud1 {
+.cloud {
     position: absolute;
+    z-index: 10;
+}
+#cloud1 {
     right: 140px;
     top: 43px;
 }
 #cloud2 {
-    position: absolute;
     right: 270px;
     top: 75px;
 }
 #cloud3 {
-    position: absolute;
     right: 60px;
     top: 123px;
 }
@@ -59,37 +62,33 @@ main {
     align-items: center;
 }
 #boxes {
-    width: 60%;
-    height: fit-content;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    /* z-index: 0; */
+}
+.big-box {
+    position: absolute;
+    border: 4px solid #051834;
+    width: 100%;
+    aspect-ratio: 14/9;
 }
 #box1 {
-    position: relative;
-    top: 150px;
+    top: 5rem;
     background-color: #C6C1FC;
-    border: 5px solid #051834;
-    width: 850px;
-    aspect-ratio: 14/9;
     z-index: 0;
 }
 #box2 {
-    position: relative;
-    top: -430px;
-    left: 40px;
+    top: 3rem;
+    left: 2rem;
     background-color: #C8E084;
-    border: 5px solid #051834;
-    width: 850px;
-    aspect-ratio: 14/9;
     z-index: 1;
 }
 #box3 {
-    position: relative;
-    top: -1015px;
-    left: 80px;
+    top: 1rem;
+    left: 4rem;
     background-color: #EFC9AD;
-    border: 3px solid #051834;
-    width: 850px;
-    aspect-ratio: 14/9;
-    z-index: 1;
+    z-index: 5;
     display: flex;
 }
 #box3 > #innerBoxLeft {
@@ -128,10 +127,65 @@ main {
     background-color: #A3A6E1;
     border: 3px solid #051834;
 }
-#problem-statement, #user-research, #scope, #systems-design, #user-flow, #prototype {
+section {
     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 #problem-statement {
-    position: relative;
-    top: -700px;
+    background-color: #ADEFC8;
+}
+#user-research {
+    background-color: #c6c1fc;
+}
+#scope {
+    background-color: #efc9ad;
+}
+#systems-design {
+    background-color: #e4c1e3;
+}
+#user-flow {
+    background-color: #a3a6e1;
+}
+#prototype {
+    background-color: #df8a6f;
+}
+@media (max-width: 1200px) {
+    #boxes {
+        width: 80%;
+        top: 10rem;
+    }
+    .big-box {
+        width: 590px;
+    }
+}
+@media (max-width:800px) {
+    header  {
+        display: none;
+    }
+    #boxes {
+        top: 13rem;
+        width: 90%;
+    }
+    #p-mod {
+        font-size: 1rem;
+    }
+    #box1, #box2 {
+        display: none;
+    }
+    #box3 {
+        border: 4px solid #051834;
+        height: 400px;
+        width: 100%;
+        left: 0px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    #h2-mod {
+        font-size: 1.5rem;
+    }
 }
