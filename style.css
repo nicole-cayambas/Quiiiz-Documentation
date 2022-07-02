@@ -189,3 +189,28 @@ section {
         font-size: 1.5rem;
     }
 }
+#problem-statement-content {
+    width: 60%;
+    line-height: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+#problem-statement-overview {
+    flex: 1;
+    background-color: #df8a6f;
+    border: 3px solid #051834;
+    padding: 1rem;
+}
+#problem-statement-background {
+    flex: 2.5;
+    background-color: #0cb4e7;
+    border: 3px solid #051834;
+    padding: 1rem;
+}
+/* #circle {
+    background-color: #0cb4e7;
+    border: 3px solid #051834;
+    border-radius: 100%;
+    width: 100px;
+    aspect-ratio: 1/1;
+} */
